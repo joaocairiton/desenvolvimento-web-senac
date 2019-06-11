@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Login</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-image: url(telafundologin.jpg);
+                background-repeat: no-repeat;
+            }
+            body:before{
+                content: '';
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                background-image: url("4.jpeg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                -webkit-filter: blur(10px);
+                -moz-filter: blur(10px);
+                -o-filter: blur(10px);
+                -ms-filter: blur(10px);
+                filter: blur(10px);
+            }
+            .contact-form
+            {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 400px;
+                height: 500px;
+                padding: 80px 40px;
+                box-sizing: border-box;
+                background: rgba(0,0,0,.5);
+            }
+            .avatar {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                overflow: hidden;
+                top: calc(-80px/2);
+                left: calc(50% - 40px);
+            }
+            .contact-form h2 {
+                margin: 0;
+                padding: 0 0 20px;
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .contact-form p
+            {
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+                color: #fff;
+            }
+            .contact-form input
+            {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .contact-form input[type="text"],
+            .contact-form input[type="password"]
+            {
+                border: none;
+                border-bottom: 1px solid #fff;
+                background: transparent;
+                outline: none;
+                height: 40px;
+                color: #fff;
+                font-size: 16px;
+            }
+            .contact-form input[type="submit"] {
+                height: 30px;
+                color: #fff;
+                font-size: 15px;
+                background: red;
+                cursor: pointer;
+                border-radius: 25px;
+                border: none;
+                outline: none;
+                margin-top: 15%;
+            }
+            .contact-form a
+            {
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div class="contact-form">
+            <img src="go.jpg" class="avatar"/>
+            <h2>Login</h2>
+            <form>
+                <p>Nome</p>
+                <input type="text"  value="#{AcessoUsuarioControle.nomeUsuario}" class="form-control" placeholder="Digite login" required=""></input>
+                <p>Senha</p>
+                <input type="password" value="#{AcessoUsuarioControle.senha}" class="form-control" placeholder="Senha" required=""></input>
+                
+                    <input type="submit" action="#{AcessoUsuarioControle.entrar}" 
+                            role="button" href="index.xhtml" class="btn btn-lg btn-primary btn-block" value="Entrar"></input>
+                
+            </form>
+        </div>
+
+
+    </body>
+
+</xhtml>
